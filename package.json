@@ -1,0 +1,14 @@
+{
+  "name": "apis-with-nodejs-express",
+  "version": "1.0.0",
+  "description": "training on express and the backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Morris",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
