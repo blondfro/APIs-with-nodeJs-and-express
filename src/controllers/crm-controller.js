@@ -34,3 +34,17 @@ export const addNewContact = (req, res) => {
         res.json(contact);
     })
 };
+
+// PUT / Update contact contact by ID
+export const updateContact = (req, res) => {
+    Contact.findOneAndUpdate(
+        { _id: req.params.contactID },
+        req.body,
+        { new: true, useFindAndModify: false },
+        (err, contact) => {
+        if (err) {
+            res.send(err)
+        }
+        res.json(contact);
+    })
+};

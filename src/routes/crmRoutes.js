@@ -12,9 +12,7 @@ const routes = (app) => {
 
     app.route("/contact/:contactID")
         .get(contact.getContactByID)
-        .put((req, res) => {
-            res.send("PUT request successful")
-        })
+        .put(contact.updateContact)
         .delete((req, res) => {
             res.send("DELETE request successful")
         })
