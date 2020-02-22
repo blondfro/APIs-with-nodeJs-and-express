@@ -7,9 +7,7 @@ const routes = (app) => {
             console.log("Request from: " + req.originalUrl);
             console.log("Request type: " + req.method);
             next();
-        }, (req, res) => {
-            res.send("GET request successful")
-        })
+        }, (contact.getContacts))
         .post(contact.addNewContact);
 
     app.route("/contact/:contactID")
