@@ -48,3 +48,15 @@ export const updateContact = (req, res) => {
         res.json(contact);
     })
 };
+
+// DELETE contact contact by ID
+export const deleteContact = (req, res) => {
+    Contact.findOneAndDelete(
+        { _id: req.params.contactID },
+        (err, contact) => {
+            if (err) {
+                res.send(err)
+            }
+            res.json({message: "Contact has been deleted."});
+        })
+};
